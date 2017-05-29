@@ -1,0 +1,2 @@
+# docker-collectd
+Dockerized CollectD
