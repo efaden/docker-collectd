@@ -10,6 +10,9 @@ fi
 # Copy default config if config empty
 if [ ! -d  /config/etc ]; then
 	mkdir -p /config/etc
+fi
+
+if [ ! -f /config/etc/collectd.conf ]; then
 	cp -rf /etc/collectd/* /config/etc/
 fi
 
@@ -21,6 +24,6 @@ fi
 
 # Link to the config in the 
 rm -rf /etc/collectd
-ln -s /config/etc/ /etc/collectd
+ln -s /config/etc /etc/collectd
 
 exec /usr/sbin/collectd -f >> /config/logs/collectd.log 2>&1

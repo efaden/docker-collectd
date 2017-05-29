@@ -4,6 +4,10 @@
 # a list of version numbers.
 FROM phusion/baseimage:0.9.22
 
+MAINTAINER Eric Faden <efaden@gmail.com>
+
+ENV DEBIAN_FRONTEND="noninteractive" 
+
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
 
