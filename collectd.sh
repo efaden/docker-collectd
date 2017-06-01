@@ -12,7 +12,7 @@ if [ ! -d  /config/etc ]; then
 	mkdir -p /config/etc
 fi
 
-if [ ! -f /config/etc/collectd.conf ]; then
+if [ ! "$(ls -A /config/etc/)" ]; then
 	cp -rf /etc/collectd/* /config/etc/
 fi
 
